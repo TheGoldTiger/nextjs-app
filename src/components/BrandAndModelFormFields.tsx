@@ -33,21 +33,19 @@ const BrandAndModelFormFields = ({
 
   return (
     <Fragment>
-      <select
-        name="brandId"
-        required={true}
-        value={brandId}
-        onChange={handleBrandChange}
-      >
-        <option value="">Select a brand</option>
+
+      <label htmlFor="brand" className="block mb-2 text-base font-medium text-gray-900">Název značky</label>
+      <select name="brandId" required={true} value={brandId} onChange={handleBrandChange}  id="brand" className="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 ">
+        <option value="">Vybrat značku</option>
         {brands.map(brand => (
           <option key={brand.id} value={brand.id}>
             {brand.name}
           </option>
         ))}
       </select>
-      <select name="modelId" required={true} value={modelId} onChange={handleModelChange}>
-        <option value="">Select a model</option>
+      <label htmlFor="model" className="block mb-2 text-base font-medium text-gray-900">Název modelu</label>
+      <select name="modelId" required={true} value={modelId} onChange={handleModelChange}  id="model" className="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500">
+        <option value="">Vybrat model</option>
         {filteredModels.map(model => (
           <option key={model.id} value={model.id}>
             {model.name}

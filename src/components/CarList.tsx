@@ -22,7 +22,7 @@ const CarList = ({ cars, brands, models }: Props) => {
   };
 
   return (
-    <div>
+    <div className="w-1/3">
       <BrandAndModelFormFields
         brands={brands}
         models={models}
