@@ -14,8 +14,8 @@ const getCars = async () => {
 const HomePage = async () => {
   const cars = await getCars()
   return (
-    <div>
-      Home Page
+    <div className="flex flex-col items-center">
+      <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">Home Page</h1>
       <CarList cars={cars} />
     </div>
   )

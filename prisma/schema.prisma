@@ -21,6 +21,7 @@ model Car {
   modelId     String
   brand       Brand    @relation(fields: [brandId], references: [id])
   brandId     String
+  image       String   @default("")
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
